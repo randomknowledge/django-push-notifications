@@ -138,7 +138,7 @@ class APNSDevice(Device):
             unhexlify(self.registration_id)
         except TypeError, e:
             raise ValidationError("registration_id: {0}".format(e.message))
-        return super(APNSDevice, self).save(args, kwargs)
+        return super(APNSDevice, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = _("APNS device")
