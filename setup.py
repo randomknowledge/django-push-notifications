@@ -19,7 +19,7 @@ CLASSIFIERS = [
     "Topic :: System :: Networking",
 ]
 
-VERSION = "0.8"
+VERSION = "0.8.1"
 
 tests_require = [
     'pytest',
