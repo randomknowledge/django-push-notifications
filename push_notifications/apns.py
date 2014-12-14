@@ -53,7 +53,7 @@ def _apns_create_socket():
 
     sock = ssl.wrap_socket(
         sock,
-        ssl_version=ssl.PROTOCOL_SSLv3,
+        ssl_version=ssl.PROTOCOL_TLSv1,
         certfile=certfile
     )
     sock.connect((SETTINGS["APNS_HOST"], SETTINGS["APNS_PORT"]))
