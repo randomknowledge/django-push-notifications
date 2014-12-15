@@ -5,7 +5,7 @@ from .models import APNSDevice, GCMDevice
 
 class DeviceAdmin(admin.ModelAdmin):
     list_display = ("__unicode__", "device_id", "user", "active")
-    search_fields = ("name", "device_id", "user__username")
+    search_fields = ("name", "device_id", "user__username", "registration_id")
     list_filter = ("active", )
     actions = ("send_message", "send_bulk_message", "enable", "disable")
 
